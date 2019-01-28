@@ -68,15 +68,21 @@ Your webpage will have to implement the features listed below. Note that the exa
 
 ## Environment Setup Guide
 1. Clone the repository:
-`git clone https://github.com/uiuc-web-programming/mp1_starter_17.git mp1`, then `cd mp1`
+`git clone https://github.com/uiuc-web-programming/mp1_starter.git mp1`, then `cd mp1`
 2. Install dependencies:
-`npm install`
+`npm install` or `npm i`
 3. Run the dev server:
 `npm run dev`
 4. Open a browser and go to `http://localhost:8080/` to view your page. You should see "Welcome to MP1!" at the top of the screen. Note that if for some reason your port 8080 is occupied, it will default to 8081.
 
 ## Submission Details
-Both part 1 and 2 needs to be done! Otherwise, we do not grade the MP.
+Here's what you will need to submit:
 
-1. Submit the your private repo for MP1 at uiucwp.com.
-2. Fill out submission form at ‘https://goo.gl/forms/nA2qNZ9ALp9btq0q2'
+1. Create a private repository on GitHub. Make sure "Initialize this repository with a README" is not checked.
+2. Change the remote url for the mp0 directory to the url of the new private repository you created. [Guide](https://help.github.com/articles/changing-a-remote-s-url/)
+3. Push your local changes to the new repository. (`git push -u origin master`)
+4. Add "UIUCWP-Bot" as a collaborator to your private repository. [Guide](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/)
+5. Run `npm run deploy` to deploy your application using GitHub Pages.
+6. After deploy finishes; you should see your deployed application on `<username>.github.io/<repo>`.
+
+To finish your submission, fill out the form [here](https://uiucwp.typeform.com/to/n5lSFL).
