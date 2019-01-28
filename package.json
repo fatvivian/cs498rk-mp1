@@ -1,12 +1,12 @@
 {
   "name": "mp1_starter",
   "version": "1.0.0",
-  "description": "University of Illinois - CS498RK1 MP1 starter files",
+  "description": "CS498RK MP1 starter files",
   "main": "index.js",
   "scripts": {
     "watch": "webpack -d --watch",
     "build": "webpack",
-    "dev": "webpack-dev-server --content-base public/ --history-api-fallback",
+    "dev": "webpack-dev-server --content-base dist/ --history-api-fallback --open",
     "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
   },

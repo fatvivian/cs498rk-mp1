@@ -2,7 +2,6 @@
 
 const webpack = require('webpack');
 const path = require('path');
-const autoprefixer = require('autoprefixer');
 const copy = require('copy-webpack-plugin');
 
 const BUILD_DIR = path.resolve(__dirname, 'dist');
@@ -26,7 +25,7 @@ const config = {
         rules: [
             {
               test: /\.jsx?/,
-              exclude: [/node_modules/, /bower_components/],
+              exclude: [/node_modules/],
               include: APP_DIR,
               use: {
                 loader: 'babel-loader',
