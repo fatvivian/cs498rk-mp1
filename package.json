@@ -7,7 +7,8 @@
     "watch": "webpack -d --watch",
     "build": "webpack",
     "dev": "webpack-dev-server --content-base public/ --history-api-fallback",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
   "repository": "github:uiuc-web-programming/mp1_starter",
   "license": "ISC",
