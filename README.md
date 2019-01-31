@@ -79,7 +79,7 @@ Your webpage will have to implement the features listed below. Note that the exa
 Here's what you will need to submit:
 
 1. Create a private repository on GitHub. Make sure "Initialize this repository with a README" is not checked.
-2. Change the remote url for the mp0 directory to the url of the new private repository you created. [Guide](https://help.github.com/articles/changing-a-remote-s-url/)
+2. Change the remote url for the mp1 directory to the url of the new private repository you created. [Guide](https://help.github.com/articles/changing-a-remote-s-url/)
 3. Push your local changes to the new repository. (`git push -u origin master`)
 4. Add "UIUCWP-Bot" as a collaborator to your private repository. [Guide](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/)
 5. Run `npm run deploy` to deploy your application using GitHub Pages.
