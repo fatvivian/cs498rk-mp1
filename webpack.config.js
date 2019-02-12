@@ -4,7 +4,7 @@ const webpack = require('webpack');
 const path = require('path');
 const copy = require('copy-webpack-plugin');
 
-const BUILD_DIR = path.resolve(__dirname, 'dist');
+const BUILD_DIR = path.resolve(__dirname, 'public');
 const APP_DIR = path.resolve(__dirname, 'source');
 
 const config = {
