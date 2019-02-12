@@ -6,7 +6,7 @@
   "scripts": {
     "watch": "webpack -d --watch",
     "build": "webpack",
-    "dev": "webpack-dev-server",
+    "dev": "webpack-dev-server --content-base dist/ --history-api-fallback --open",
     "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
   },
