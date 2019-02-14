@@ -1,5 +1,6 @@
 body {
   margin: 0px;
+  font-family: Montserrat;
 }
 
 .navbar {
@@ -13,6 +14,58 @@ body {
   font-weight: 700;
   z-index: 8;
 
+
+  .nav_container {
+    display: inline-block;
+  }
+
+  #home {
+    padding-right: 15%;
+  }
+  #menu {
+    display: none;
+  }
+  .expand{
+    display: none;
+    background-color: #F7819F;
+    border: none;
+    float: right;
+    color: white;
+  }
+
+  @media (max-width: 750px) {
+    .nav_container {
+      display: block;
+      text-align: left;
+      #home {
+        text-align: left;
+        display: inline-block;
+      }
+      .expand {
+        display: inline-block;
+        font-size: 1rem;
+        border-radius: 0.1rem;
+        padding: 0.5rem;
+        cursor: pointer;
+      }
+    }
+    #menu:checked + #others {
+      display: block;
+    }
+
+    #menu:not(checked) + #others {
+      display: none;
+    }
+
+    #button1, #button2, #button3{
+      font-size: 1rem;
+      display: block;
+    }
+    #welcome {
+      text-align: left;
+    }
+  }
+
   .navbar_button {
     cursor: pointer;
     border-radius: 0.1rem;
@@ -23,16 +76,16 @@ body {
     padding-right: 1rem;
     color: white;
   }
+
+  .navbar_button:hover {
+    color: #F8E0F1;
+  }
 }
 
-#welcome {
-  margin-right: 10rem;
-}
 
 header {
   position: relative;
-  margin: 0px;
-  padding: 0px;
+  padding-top: 3rem;
   img {
     width: 100%;
   }
@@ -156,7 +209,6 @@ section {
           padding: 4%;
         }
       }
-
     }
   }
 
@@ -212,7 +264,7 @@ footer {
     color: white;
     font-family: Montserrat;
     h1 {
-      font-weight: 600;
+      font-weight: 510;
       font-size: 25px;
     }
     p {
@@ -222,7 +274,7 @@ footer {
   }
 }
 
-.fa {
+.social_icon {
   margin: 0.3rem;
   text-decoration: none;
   width: 3rem;
@@ -235,7 +287,7 @@ footer {
   color: white;
 }
 
-.fa:hover {
+.social_icon:hover {
   background: white;
   color: black;
 }

@@ -2,7 +2,6 @@ var slideIndex = 0;
 var slidetimeout;
 var section_list = ["page-top", "section_1", "section_2", "section_3"];
 var buttons = ["welcome", "button1", "button2", "button3", ];
-console.log(document.getElementById("navbar").offsetHeight);
 
 showSlides();
 window.onscroll = function() {scrollFunction()};
@@ -55,9 +54,9 @@ function highlight(n) {
   console.log(target);
   var cur = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
   var prev = cur;
-  var step = 20;
+  var step = 23;
   if (target < cur)
-    step = -20;
+    step = -23;
   var t = window.setInterval(function(){
     var target = Math.max(0, document.getElementById(section_list[n]).offsetTop - document.getElementById("navbar").offsetHeight);
     var curY = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
@@ -72,7 +71,6 @@ function highlight(n) {
     if (prev == curY)
       clearInterval(t);
     if (Math.abs(step) > Math.abs(target - curY)){
-      console.log(777, Math.abs(step), Math.abs(target - curY) );
       window.scrollTo(0, target);
       clearInterval(t);
     }
@@ -86,9 +84,13 @@ function scrollFunction() {
   if (curY > 80){
     document.getElementsByClassName("navbar")[0].style.fontSize = "1rem";
     document.getElementsByClassName("navbar")[0].style.padding = "1rem";
+    document.getElementById("m").style.fontSize = "0.6rem";
+    document.getElementById("m").style.padding = "0.4rem";
   } else {
     document.getElementsByClassName("navbar")[0].style.fontSize = "1.5rem";
     document.getElementsByClassName("navbar")[0].style.padding = "1.5rem";
+    document.getElementById("m").style.fontSize = "1rem";
+    document.getElementById("m").style.padding = "0.5rem";
   }
   var highlight = -1;
   for (var i = 1; i < section_list.length; i++) {
@@ -99,9 +101,10 @@ function scrollFunction() {
   }
   for (var i = 1; i < section_list.length; i++) {
     if (i != highlight) {
-      document.getElementById(buttons[i]).style.backgroundColor="black";
+        document.getElementById(buttons[i]).style.backgroundColor="black";
     } else {
-      document.getElementById(buttons[i]).style.backgroundColor="#F7819F";
+      if (!document.getElementById("menu").checked)
+        document.getElementById(buttons[i]).style.backgroundColor="#F7819F";
     }
   }
 }
