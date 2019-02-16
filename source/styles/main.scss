@@ -33,7 +33,7 @@ body {
     color: white;
   }
 
-  @media (max-width: 750px) {
+  @media (max-width: 800px) {
     .nav_container {
       display: block;
       text-align: left;
@@ -250,7 +250,7 @@ section {
       padding: 4%;
     }
   }
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     .content_container {
         width: 75%;
         padding: 3%;
