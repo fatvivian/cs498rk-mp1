@@ -187,6 +187,7 @@ section {
   }
 }
 
+
 .modal_content {
   z-index: 10;
   position: fixed;
@@ -247,6 +248,12 @@ section {
       margin: auto;
       width: 90%;
       padding: 4%;
+    }
+  }
+  @media (max-width: 600px) {
+    .content_container {
+        width: 75%;
+        padding: 3%;
     }
   }
 }
