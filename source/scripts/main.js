@@ -16,7 +16,9 @@ var next = document.getElementsByClassName("next");
 next[0].addEventListener("click", function() {nextSlide(1);});
 
 var modals = document.getElementsByClassName("modal");
-var closes = document.getElementsByClassName("close")
+var closes = document.getElementsByClassName("close");
+var wechat = document.getElementById("wechat");
+
 
 for (var i = 0; i < modals.length; i++) {
   (function (n) {
@@ -54,17 +56,15 @@ function highlight(n) {
   console.log(target);
   var cur = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
   var prev = cur;
-  var step = 23;
+  var step = 25;
   if (target < cur)
-    step = -23;
+    step = -25;
   var t = window.setInterval(function(){
     var target = Math.max(0, document.getElementById(section_list[n]).offsetTop - document.getElementById("navbar").offsetHeight);
     var curY = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
     if ((step > 0 && target > curY) || (step < 0 && target < curY)){
       window.scrollBy(0, step);
-      console.log(111, curY, target);
     }else {
-      console.log(222, curY, target);
       clearInterval(t);
     }
     var curY = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
