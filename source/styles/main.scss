@@ -166,7 +166,8 @@ section {
   .fixed_background {
     overflow-x:  hidden;
     #fixed_text {
-      background-image: url("assets/fixed.jpg");
+      background  : url("assets/fixed.jpg");
+      background-size: 100%;
       padding-right: 100px;
       margin-right: -100px;
       repeat: no-repeat;
