@@ -107,6 +107,10 @@ function scrollFunction() {
         document.getElementById(buttons[i]).style.backgroundColor="#F7819F";
     }
   }
+  var scrollPassSectonTwo = 100 + Math.max(0, document.getElementById('section_1').offsetTop-document.getElementById("navbar").offsetHeight);
+  if (curY + 1 >= scrollPassSectonTwo) {
+    document.getElementById('fixed_text').scrollTo(0, 1.2*(curY - scrollPassSectonTwo));
+  }
 }
 
 

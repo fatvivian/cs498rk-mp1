@@ -164,15 +164,17 @@ section {
   }
 
   .fixed_background {
-    overflow-x:  hidden;
+    background  : url("assets/fixed.jpg");
+    repeat: no-repeat;
+    height: 500px;
+    background-size: cover;
+    overflow-x: hidden;
+    background-attachment: fixed;
     #fixed_text {
-      background  : url("assets/fixed.jpg");
-      background-size: 100%;
       padding-right: 100px;
       margin-right: -100px;
-      repeat: no-repeat;
-      height: 500px;
       overflow-y: scroll;
+      height: 500px;
     }
   }
 
